@@ -1,11 +1,28 @@
 # Reference List
 
 ## Keyword
-- ![](https://img.shields.io/badge/NLU-green) ![](https://img.shields.io/badge/NLG-orange) ![](https://img.shields.io/badge/Continuous_Prompt-blue) ![](https://img.shields.io/badge/Discrete_Prompt-red) ![](https://img.shields.io/badge/Survey-grey)
+- ![](https://img.shields.io/badge/NLU-green) ![](https://img.shields.io/badge/NLG-orange) ![](https://img.shields.io/badge/Continuous_Prompt-blue) ![](https://img.shields.io/badge/Discrete_Prompt-red) ![](https://img.shields.io/badge/Survey-grey) ![](https://img.shields.io/badge/STS-purple)
 
 ## Contrastive
 
+- **2005 Cert: Contrastive self-supervised learning for language understanding**
+  - *Hongchao Fang et al., UC San Diego*
+  - Augment 용으로 Back-Translation 사용
+- **2005 Pretraining with Contrastive Sentence Objectives Improves Discourse Performance of Language Models**
+  - *ACL 2020, Dan Iter et al., Stanford, Google Research*
+  - Anchor Sentence 주변 문장을 예측하는 방식으로 Contrastive learning, discourse relationship에 초점을 맞춤
+  - DiscoEval , RTE, COPA and ReCoRD tasks
+- **2006 DeCLUTR: Deep Contrastive Learning for Unsupervised Textual Representations**
+  - *ACL2021, John Giorgi et al., Toronto Univ.*
+  - Paragraph 단위로 인접하거나, 포함된 span을 positive로 MLM과 함께 학습
+  - CR, MR, MPQA, SUBJ, SST2, SST5, TREC, MRPC, SNLI, Task
+- **2009 SEMANTIC RE-TUNING WITH CONTRASTIVE TENSION ![](https://img.shields.io/badge/STS-purple)**  
+  - *ICLR2021, Fredrik Carlsson et al., RISE NLU group*
+  - a new self-supervised method called Contrastive Tension (CT) : a noise-contrastive task
+  - Fine Tuning 전에는 마지막 레이어보다 앞선 레이어의 **mean pooling**이 STS 점수가 더 높다
+  - eng wiki 사용, batch 16. 동일한 문장으로 positive set을 만드는데, simcse와 다른 점은 다른 두개의 모델을 사용하는것(초기화는 동일)
 
+  
 ## Prompt Learning
 
 - **2101 Prefix-Tuning : Optimizing Continuous Prompts for Generation ![](https://img.shields.io/badge/Continuous_Prompt-blue) ![](https://img.shields.io/badge/NLG-orange)**
