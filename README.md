@@ -1,7 +1,7 @@
 # Reference List
 
 ## Keyword
-- ![](https://img.shields.io/badge/NLU-green) ![](https://img.shields.io/badge/NLG-orange) ![](https://img.shields.io/badge/Continuous_Prompt-blue) ![](https://img.shields.io/badge/Discrete_Prompt-red)
+- ![](https://img.shields.io/badge/NLU-green) ![](https://img.shields.io/badge/NLG-orange) ![](https://img.shields.io/badge/Continuous_Prompt-blue) ![](https://img.shields.io/badge/Discrete_Prompt-red) ![](https://img.shields.io/badge/Survey-grey)
 
 ## Contrastive
 
@@ -37,6 +37,10 @@
   - binary relation관계에 있는 x(입력), y(정답)을 맞추는 문제에 적용(LAMA, T-REx 등)
   - Deep Perterbation 적용 
   - BERT, BART 등 사용
-- **2107 Pre-train, Prompt, and Predict: A Systematic Survey of Prompting Methods in Natural Language Processing.**
+- **2107 Pre-train, Prompt, and Predict: A Systematic Survey of Prompting Methods in Natural Language Processing. ![](https://img.shields.io/badge/Survey-grey)**
   - *Preprint, Liu et al.,* 
   - dddd
+- **2110 P-Tuning v2: Prompt Tuning Can Be Comparable to Fine-tuning Universally Across Scales and Tasks ![](https://img.shields.io/badge/Continuous_Prompt-blue) ![](https://img.shields.io/badge/NLU-green)**
+  - *Liu et al, Tsinghua*
+  - normal size model, hard sequence labeling task(like SQuAD)에 p-tuning 적용
+  - prefix-tuning, soft prompt를 NLU에 적용한 버전
