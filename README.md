@@ -62,3 +62,4 @@
   - normal size model, hard sequence labeling task(like SQuAD)에 p-tuning 적용
   - prefix-tuning, soft prompt를 NLU에 적용한 버전
 - **Prompt Tuning for Discriminative Pre-trained Language Models**
+  - https://arxiv.org/pdf/2205.11166.pdf
