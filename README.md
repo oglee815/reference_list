@@ -27,11 +27,11 @@
 
 - **2101 Prefix-Tuning : Optimizing Continuous Prompts for Generation ![](https://img.shields.io/badge/Continuous_Prompt-blue) ![](https://img.shields.io/badge/NLG-orange)**
   - *ACL2021, Li and Liang, Stanford*
-  - Encoder와 decoder 입력 앞에 virtual token(prefix)을 붙여서, 해당 토큰과 관련된 파라미터만 학습함(Continuous vector)
+  - Encoder와 decoder 입력 앞에 **virtual token(prefix)** 을 붙여서, 해당 토큰과 관련된 파라미터만 학습함(Continuous vector)
   - prefix 토큰의 임베딩 메트릭스를 곧바로 학습하지 않고 reparameterize를 시켜서 학습함. p = MLP(p'), inference 시에는 p만 사용
   - Task : Table-To-Text, Abstractive Sum 
   - 흥미로운 결과: Prefix를 랜덤보다 그냥 banana라도 real word로 하는게 성능이 좋음, prefix vs infix 끼리 비교도 함 
-  - P-tuning하고 유사한 continuous prompt learning이지만 이 페이퍼는 prefix를 real token으로 사용하는 차이가 있는 것 같음 
+  - P-tuning하고 유사한 continuous prompt learning이지만 이 페이퍼는 prefix를 real token으로 사용하는 차이가 있는 것 같음
 - **2103 P-tuning: GPT Understands, Too ![](https://img.shields.io/badge/Continuous_Prompt-blue) ![](https://img.shields.io/badge/NLU-green)**
   - *Preprint, Liu et al, Tsinghua*
   - Discrete Prompt Engineering의 한계를 극복하기 위해 Continuous Prompt Learning의 최초 제안 
@@ -63,3 +63,16 @@
   - prefix-tuning, soft prompt를 NLU에 적용한 버전
 - **Prompt Tuning for Discriminative Pre-trained Language Models**
   - https://arxiv.org/pdf/2205.11166.pdf
+
+## ETC
+
+- **2011 On the sentence embeddings from pre-trained language models ![](https://img.shields.io/badge/NLU-green)**
+  - *Li et al., Carnegie Mellon University*
+  - BERT-flow 논문
+  - reveal the theoretical connection between the masked lanugae model pre-training objective and the semantic similarity task theoretically.
+  - **BERT always induces a non-smooth anisotropic(이방성) semantic space of sentences,** which harms its performance of semantic similarity.
+  - anisotropic : word embedding 이 narrow cone 처럼 되어 있는 현상 말하는듯??
+  - average token embedding
+  - mlm loss 간단하게 설명해야하면 이 페이퍼 참조해도 될듯
+  - PMI is a common mathematical surrogate to approximate word-level semantic similarity.
+  - word embeddings can be biased to word frequency
