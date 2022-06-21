@@ -73,6 +73,6 @@
   - **BERT always induces a non-smooth anisotropic(이방성) semantic space of sentences,** which harms its performance of semantic similarity.
   - anisotropic : word embedding 이 narrow cone 처럼 되어 있는 현상 말하는듯??
   - average token embedding
-  - mlm loss 간단하게 설명해야하면 이 페이퍼 참조해도 될듯
+  - mlm loss 간단하게 설명해야하면 이 페이퍼 참조해도 될듯.
   - PMI is a common mathematical surrogate to approximate word-level semantic similarity.
   - word embeddings can be biased to word frequency
