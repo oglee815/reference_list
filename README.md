@@ -21,8 +21,11 @@
   - a new self-supervised method called Contrastive Tension (CT) : a noise-contrastive task
   - Fine Tuning 전에는 마지막 레이어보다 앞선 레이어의 **mean pooling**이 STS 점수가 더 높다
   - eng wiki 사용, batch 16. 동일한 문장으로 positive set을 만드는데, simcse와 다른 점은 다른 두개의 모델을 사용하는것(초기화는 동일)
-
-  
+- **2106 Self-guided contrastive learning for BERT sentence Representation ![](https://img.shields.io/badge/STS-purple)**
+  - *Taeuk et .al, NAVER*
+  - fine-tunes BERT in a self-supervised fashion, does not rely on data augmentation, redesign the contrastive learning objective 
+  - Conflate(융합) the knowledge stored in *BERT's different layers* to produce sentence embeddings
+  - BERT(Fixed), BERT(Train) 두개의 센텐스 아웃풋을 positive sample로 사용. 이 때, Fixed BERT의 각 레이어의 아웃풋 중 max pooling 하여 사용
 ## Prompt Learning
 
 - **2101 Prefix-Tuning : Optimizing Continuous Prompts for Generation ![](https://img.shields.io/badge/Continuous_Prompt-blue) ![](https://img.shields.io/badge/NLG-orange)**
