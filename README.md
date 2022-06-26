@@ -21,6 +21,21 @@
   - a new self-supervised method called Contrastive Tension (CT) : a noise-contrastive task
   - Fine Tuning 전에는 마지막 레이어보다 앞선 레이어의 **mean pooling**이 STS 점수가 더 높다
   - eng wiki 사용, batch 16. 동일한 문장으로 positive set을 만드는데, simcse와 다른 점은 다른 두개의 모델을 사용하는것(초기화는 동일)
+- **2012 Universal Sentence Representation Learning with Conditonal Masked Language Model**
+  - *Yang et al., Stanford, Google Research*
+  - propose Conditional Masked Language Modeling(CMLM), to learn sentence representation on large scale unlabeld corpora, fully unsupervised
+  - combinating next sentence prediction with MLM training
+  - 와.. 미친 이 페이퍼 diffcse랑 너무 비슷한데? MLM을 하는데 주변 문장들의 semantic을 diffcse의 cls_input 처럼 넘겨준다;;
+  - Multilingual로도 테스트
+  - skip-though 랑 비슷
+  - avg pooling
+  - sentence embedding을 3 layer projection을 통해서 H x N dim으로 변환하는데, 나도 SE와 Discriminator를 다른 모델을 쓴다면 이런 방식을 사용할 수도 있겠다.
+    - 여기서 N이 마치 Prompt의 Length처럼 느껴진다.
+  - inference 할 때는 First Encoder만 사용
+  - Common Crawl dumps, MLM 약 30% 적용하여 more challenging 하게 만듬
+- **ESimCSE: Enhance sample building method for contrastive learning of unsupervised sentence embedding**
+  -  
+
 - **2106 Self-guided contrastive learning for BERT sentence Representation ![](https://img.shields.io/badge/STS-purple)**
   - *Taeuk et .al, NAVER*
   - fine-tunes BERT in a self-supervised fashion, does not rely on data augmentation, redesign the contrastive learning objective 
