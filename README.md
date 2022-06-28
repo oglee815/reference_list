@@ -97,16 +97,24 @@
   - prefix-tuning, soft prompt를 NLU에 적용한 버전
 - **Prompt Tuning for Discriminative Pre-trained Language Models**
   - https://arxiv.org/pdf/2205.11166.pdf
-- **2201 PromptBERT: Improving BERT Sentence Embeddings with Prompts**
+- **2201 PromptBERT: Improving BERT Sentence Embeddings with Prompts ![](https://img.shields.io/badge/Discrete_Prompt-red) ![](https://img.shields.io/badge/STS-purple)**
   - *Jiang et al.,, 베이징대*
   - Reforming the sentence embeddings task as the fillin-the-blanks promblem.
-  - Two prompt representing method, 3 prompt searching methods
+  - Two prompt representing method
+    - MASK token's hidden vector itself, weighted averaging top-k tokens' hidden vector which is nearest with MASK token
+  - 3 prompt searching methods
+    - Manual, template generation by T5, OptiPrompt 
   - Anisotropy makes the token embeddings cuupy a narrow cone, resuling in a high similarity between any sentence pair
   - 이방성이 poor sentence representaiton의 문제인줄 알았으나, 이방성이 상대적으로 적은 마지막 layer의 average pooling이 이방성이 더 큰 static token averaging 보다 더 sentence representaiton 이 구린 것을 봐서는, 이방성 만이 문제는 아닌것으로 봄
   - high frequency subwords나 punctuation을 제거한 뒤 token averaging을 s.r 로 사용. token bias를 줄임
   - Anisotropy를 구하는 공식
     - ![image](https://user-images.githubusercontent.com/18374514/175939045-d0dabd46-d844-43c6-abb4-d911cf1ddd18.png)
-    - 
+  - We find only bert-base uncased static token embeddings is highly anisotropic 
+  - 토큰 몇개를 지우는 것 만으로도 token bias를 줄일 수 있어서 Sentence Representation에 도움이 됨
+  - Non-fine-tuned, fine-tuned setting
+  - The promptBERT contrastive training objective leverages representations from two different prompt templates as positive pairs
+    - Alternative to the dropout mask used in SIMCSE
+    - They also apply a template denoising technique
 
 ## ETC
 
