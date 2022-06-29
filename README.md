@@ -1,13 +1,14 @@
 # Reference List
 
 ## Keyword
-- ![](https://img.shields.io/badge/NLU-green) ![](https://img.shields.io/badge/NLG-orange) ![](https://img.shields.io/badge/Continuous_Prompt-blue) ![](https://img.shields.io/badge/Discrete_Prompt-red) ![](https://img.shields.io/badge/Survey-grey) ![](https://img.shields.io/badge/STS-purple)
+- ![](https://img.shields.io/badge/NLU-green) ![](https://img.shields.io/badge/NLG-orange) ![](https://img.shields.io/badge/Continuous_Prompt-blue) ![](https://img.shields.io/badge/Discrete_Prompt-red) ![](https://img.shields.io/badge/Survey-grey) ![](https://img.shields.io/badge/STS-purple) ![](https://img.shields.io/badge/GLUE-yellow)
 
 ## Contrastive
 
 - **2005 Cert: Contrastive self-supervised learning for language understanding**
   - *Hongchao Fang et al., UC San Diego*
   - Augment 용으로 Back-Translation 사용
+  - Transformer나 BERT 등 기본적인 related work 기술이 잘되어있음.
 - **2005 Pretraining with Contrastive Sentence Objectives Improves Discourse Performance of Language Models**
   - *ACL 2020, Dan Iter et al., Stanford, Google Research*
   - Anchor Sentence 주변 문장을 예측하는 방식으로 Contrastive learning, discourse relationship에 초점을 맞춤
@@ -21,8 +22,13 @@
   - a new self-supervised method called Contrastive Tension (CT) : a noise-contrastive task
   - Fine Tuning 전에는 마지막 레이어보다 앞선 레이어의 **mean pooling**이 STS 점수가 더 높다
   - eng wiki 사용, batch 16. 동일한 문장으로 positive set을 만드는데, simcse와 다른 점은 다른 두개의 모델을 사용하는것(초기화는 동일)
-- **2104 SimCSE** 
-- **2012 Universal Sentence Representation Learning with Conditonal Masked Language Model**
+- **2011 Supervised Contrastive Learning for Pret-rained language model finetuning ![](https://img.shields.io/badge/GLUE-yellow)**
+  - *Gunel et al, ICLR2021, Stanford, Facebook AI*
+  - supervised CL that pushes the exmaples from the same class close and the examples from different classes further apart
+  - 컨셉 자체는 이미 SimCSE의 Supervised setup하고 동일한 것 같은데..?
+  - Self-supervised learning methods do not require any labeld data;instead they sample a mini batch from unsupervised data and create positive and negative examples from these eampels using strong data augmentation techniques such as AutoAugment~. 
+    - 좋은 정리 
+- **2012 CMLM: Universal Sentence Representation Learning with Conditonal Masked Language Model**
   - *Yang et al., Stanford, Google Research*
   - propose Conditional Masked Language Modeling(CMLM), to learn sentence representation on large scale unlabeld corpora, fully unsupervised
   - combinating next sentence prediction with MLM training
@@ -34,6 +40,12 @@
     - 여기서 N이 마치 Prompt의 Length처럼 느껴진다.
   - inference 할 때는 First Encoder만 사용
   - Common Crawl dumps, MLM 약 30% 적용하여 more challenging 하게 만듬
+- **2104 SimCSE** 
+- **ConSERT: A contrastive Framework for Self-supervised sentence representation Transfer**
+  - *Yan et al, 베이징대*
+  - In other words, the BERT-derived native sentence representations are somehow collapsed, which means almost all sentences are mapped into a small area and therefore produce high similarity.
+  - When averaging token embeddings, those high-frequency words dominate the sentence representations, inducing biases against their real semantics.
+  - 
 - **2106 Self-guided contrastive learning for BERT sentence Representation ![](https://img.shields.io/badge/STS-purple)**
   - *Taeuk et .al, NAVER*
   - fine-tunes BERT in a self-supervised fashion, does not rely on data augmentation, redesign the contrastive learning objective 
@@ -56,6 +68,20 @@
   - negated sentences are generated through a rule-based method(spacy tool)
   - H를 얻고자, prompt를 사용 "X" means [MASK] 에서 MASK의 hidden output을 사용
   - 1M 위키 샘플을 사용하긴 했는데, Spacy로 negative sample을 만들었으니 SimCSE와 Fair한 비교는 아니라고 봐야하지 않나?
+- **2204 PaSeR: Generative or Contrastive? Pharase Reconstruction for Better Sentence Representation Learning ![](https://img.shields.io/badge/STS-purple)**
+  - *Wu et al., Shanghai Jiao Tong*
+  - Contrastive 방식이 아니라 Generative 방식으로 Sentence Representation을 한다는게 특이함
+  - Generally, self-supervised methods include both (i) generative methods, like MLM, and (ii) contrastive methods, like NSP.
+  - Good performance on STS tasks by contrastive methods does not ensure good performance on downstream retrieval tasks, as there exists obvious inductive bias.
+    - 나도 이 부분을 논문에서 discuss 해야 할듯
+  - SimCSE와 해당 논문에선 CL과 MLM을 함께 못한다고 되어있는데, DCPCSE에서는 오히려 성능 향상이 있었음
+  - In detail, we hypothesize a good sentence representation should be able to reconstruct the important phrases in the sentence when given a *suitable generation signal.*
+  - mask out several phrases in the original sentences, and encode these maksed sentences to provide hints for phrase reconstruction
+    - 결국 얘네도 DiffCSE랑 비슷함. RTD 대신 MLM을 하는것일뿐
+  - BERT 와 BART 사용
+  - EDA로 Data Augmentation 햇으나, CL용은 아니고 그냥 데이터 뻥튀기 용인듯.
+  - Retrieval performance를 QQP 사용
+  - SimCSE처럼 STSB로 Uniformity and alignment 측정
 
 ## Prompt Learning
 
@@ -115,6 +141,13 @@
   - The promptBERT contrastive training objective leverages representations from two different prompt templates as positive pairs
     - Alternative to the dropout mask used in SIMCSE
     - They also apply a template denoising technique
+- **2204 CP-Tuning : Making pre-trained language models end-to-end few-shot learners with contrastive prompt tuning ![](https://img.shields.io/badge/Continuous_Prompt-blue)**
+  - *Xu et al., Alibaba, Carnegie Mellon*
+  - ![image](https://user-images.githubusercontent.com/18374514/176161041-466f4687-6e39-4767-b048-5d7c5dff5b3e.png)
+  - Task-invaraint continuos prompt encoding
+  - Verbalizer-free class mapping
+  - prompt와 verbalizer에 대한 표현 설명 좋음
+
 
 ## ETC
 
@@ -128,3 +161,6 @@
   - mlm loss 간단하게 설명해야하면 이 페이퍼 참조해도 될듯.
   - PMI is a common mathematical surrogate to approximate word-level semantic similarity.
   - word embeddings can be biased to word frequency
+
+- **Supervsied learning of universal sentence representations from natural language inference data**
+  - *Conneau*
