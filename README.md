@@ -164,3 +164,14 @@
 
 - **Supervsied learning of universal sentence representations from natural language inference data**
   - *Conneau*
+
+- **Understanding Contrastive Representation Learning through Alignment and Uniformity on the Hypersphere**
+  - *Wang et al, MIT, ICML2020*
+  - alignment와 uniformity를 향상시키도록 cl을 하면 다운스트림 테스크에서 성능이 향상됨을 보인 논문
+  - alignment와 uniformity를 측정할 수 있는 metric 제안, vison과 language 모두 테스트
+  - Intuitively, having the features live on the unit hypersphere leads to several desirable traits. Fixed-norm vectors are known to improve training stability in modern machine learning where dot products are ubiquitous.
+    - ![image](https://user-images.githubusercontent.com/18374514/176686781-c120a0aa-a1fb-450c-8c96-a4ad3e25ed4b.png)
+  - Recent works argue that representations should additionally be invariant to unnecessary details, and preserve as much information as possible.
+    - Let us call these two properties alignment and uniformity
+  - Alignment favors encoders that assign similar features to similar samples.
+  - Uniformity prefers a feature distribution that preserves maximal information, i.e., the uniform distribution on the unit hypersphere.  
