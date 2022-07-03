@@ -123,6 +123,10 @@
   - *Liu et al, Tsinghua*
   - normal size model, hard sequence labeling task(like SQuAD)에 p-tuning 적용
   - prefix-tuning, soft prompt를 NLU에 적용한 버전
+  - prompting에 대한 필요성 및 장점에 대한 설명 잘되어이씀
+  - Our main contribution in this paper is a novel empirical finding that properly optimized prompt tuning can be comparable to fine-tuning universally across various model scales and NLU tasks.
+  - The most significant improvement originates from appling continous prompts for every layer of the pretraiend model, instead of the mere input layer.
+  - Prompt tuning이 갖는 lack of universality across cales, tasks에 대해 다루고 있음. 이부분에서 우리도 할말있을듯 lack of universailty.
 - **Prompt Tuning for Discriminative Pre-trained Language Models**
   - https://arxiv.org/pdf/2205.11166.pdf
 - **2201 PromptBERT: Improving BERT Sentence Embeddings with Prompts ![](https://img.shields.io/badge/Discrete_Prompt-red) ![](https://img.shields.io/badge/STS-purple)**
@@ -153,6 +157,12 @@
 
 ## ETC
 
+- **2010 Augmented SBERT: data Augmentation Method for Improving Bi-encoders for pairwise sentence scoring tasks**
+  - *Thakur, UKP-TUDA*
+  - Cross Encoder(문장 두개를 입력으로 받음)로 labeling한 데이터를 Bi-encoder(문장을 각각 입력 받음)의 augment sample로 사용하는 전략
+  - The focus of our work are sampling techniques.
+  - Random sampling and Kernel Density Estimation, BM25 sampling, Semantic search sampling, 
+
 - **2011 On the sentence embeddings from pre-trained language models ![](https://img.shields.io/badge/NLU-green)**
   - *Li et al., Carnegie Mellon University*
   - BERT-flow 논문
@@ -181,3 +191,4 @@
   - **Uniformity: feature vectors should be roughly uniformly distributed on the unit hypershpehre S, preserving as much information of the data as possible.**
   - The alignment loss is straightforwardly defined with the expected distance between positive pairs
   - 
+
