@@ -174,4 +174,8 @@
   - Recent works argue that representations should additionally be invariant to unnecessary details, and preserve as much information as possible.
     - Let us call these two properties alignment and uniformity
   - Alignment favors encoders that assign similar features to similar samples.
-  - Uniformity prefers a feature distribution that preserves maximal information, i.e., the uniform distribution on the unit hypersphere.  
+  - Uniformity prefers a feature distribution that preserves maximal information, i.e., the uniform distribution on the unit hypersphere.
+  - **Alignment: two samples forming a positive pair should be mapped to nearby featrues, and thus be(mostly) invariant to unneeded noise factors**
+  - **Uniformity: feature vectors should be roughly uniformly distributed on the unit hypershpehre S, preserving as much information of the data as possible.**
+  - The alignment loss is straightforwardly defined with the expected distance between positive pairs
+  - 
