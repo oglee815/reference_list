@@ -43,9 +43,11 @@
 - **2104 SimCSE** 
 - **ConSERT: A contrastive Framework for Self-supervised sentence representation Transfer**
   - *Yan et al, 베이징대*
+  - 다양한 augmentation 방법(adversarial, token shuffiling, cutoff, dropout) 사용
   - In other words, the BERT-derived native sentence representations are somehow collapsed, which means almost all sentences are mapped into a small area and therefore produce high similarity.
   - When averaging token embeddings, those high-frequency words dominate the sentence representations, inducing biases against their real semantics.
-  - 
+  - NLI데이터를 supervised signal로 사용해서, CL과 Joint, sup-unsup(내가 하는거네), joint-unsup(NLI먼저, 그다음 cl) 하는 방식 활용
+  - STS 데이터로 unsup을 하긴 했음. wiki가 아님
 - **2106 Self-guided contrastive learning for BERT sentence Representation ![](https://img.shields.io/badge/STS-purple)**
   - *Taeuk et .al, NAVER*
   - fine-tunes BERT in a self-supervised fashion, does not rely on data augmentation, redesign the contrastive learning objective 
