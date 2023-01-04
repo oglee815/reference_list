@@ -4,6 +4,7 @@
 - ![](https://img.shields.io/badge/NLU-green) ![](https://img.shields.io/badge/NLG-orange) ![](https://img.shields.io/badge/Continuous_Prompt-blue) ![](https://img.shields.io/badge/Discrete_Prompt-red) ![](https://img.shields.io/badge/Survey-grey) ![](https://img.shields.io/badge/STS-purple) ![](https://img.shields.io/badge/GLUE-yellow)
 
 ## Diffusion Model
+- 2205 [Diffusion-LM Improves Controllable Text Generation](https://arxiv.org/abs/2205.14217)
 - 2210 [DiffuSeq: Sequence to Sequence Text Generation with Diffusion Models](https://arxiv.org/abs/2210.08933)
 - 2211 [DiffusionBERT: Improving Generative Masked Language Models with Diffusion Models](https://arxiv.org/abs/2211.15029)
 - 2212 [Difformer: Empowering Diffusion Model on Embedding Space for Text Generation](https://arxiv.org/abs/2212.09412)
