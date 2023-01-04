@@ -72,11 +72,11 @@
   - H를 얻고자, prompt를 사용 "X" means [MASK] 에서 MASK의 hidden output을 사용
   - 1M 위키 샘플을 사용하긴 했는데, Spacy로 negative sample을 만들었으니 SimCSE와 Fair한 비교는 아니라고 봐야하지 않나?
  
-- 2202 Exploring the Impact of Negative Samples of Contrastive Learning: A Case Study of Sentence Embedding
-- 2202 Toward Interpretable Semantic Textual Similarity via Optimal Transport-based Contrastive Sentence Learning
-- 2203 SCD: Self-Contrastive Decorrelation for Sentence Embeddings
-- 2203 Improved Universal Sentence Embeddings with Prompt-based Contrastive Learning and Energy-based Learning
-- ?? A Contrastive Framework for Learning Sentence Representations from Pairwise and Triple-wise Perspective in Angular Space
+- **2202 Exploring the Impact of Negative Samples of Contrastive Learning: A Case Study of Sentence Embedding**
+- **2202 Toward Interpretable Semantic Textual Similarity via Optimal Transport-based Contrastive Sentence Learning**
+- **2203 SCD: Self-Contrastive Decorrelation for Sentence Embeddings**
+- **2203 Improved Universal Sentence Embeddings with Prompt-based Contrastive Learning and Energy-based Learning**
+- **?? A Contrastive Framework for Learning Sentence Representations from Pairwise and Triple-wise Perspective in Angular Space**
 
 - **2204 PaSeR: Generative or Contrastive? Pharase Reconstruction for Better Sentence Representation Learning ![](https://img.shields.io/badge/STS-purple)**
   - *Wu et al., Shanghai Jiao Tong*
