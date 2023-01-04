@@ -9,6 +9,7 @@
 - 2212 [Difformer: Empowering Diffusion Model on Embedding Space for Text Generation](https://arxiv.org/abs/2212.09412)
 - 2212 [Diff-Glat: Diffusion Glancing Transformer for Parallel Sequence to Sequence Learning](https://arxiv.org/abs/2212.10240)
 - 2212 [Self-conditioned Embedding Diffusion for Text Generation](https://arxiv.org/abs/2211.04236)
+- 2212 [GENIE: Large Scale Pre-training for Generation with Diffusion Model](https://arxiv.org/abs/2211.04236)
 
 ## Contrastive
 
