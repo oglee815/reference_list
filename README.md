@@ -15,8 +15,6 @@
 - 2212 [GENIE: Large Scale Pre-training for Generation with Diffusion Model](https://arxiv.org/abs/2211.04236)
 - 2212 [SeqDiffuSeq: Text Diffusion with Encoder-Decoder Transformers](https://arxiv.org/abs/2212.10325)
 
-Argmax flows and multinomial diffusion: Towards non-autoregressive language models
-
 ## Contrastive
 
 - **2005 Cert: Contrastive self-supervised learning for language understanding**
