@@ -4,6 +4,8 @@
 - ![](https://img.shields.io/badge/NLU-green) ![](https://img.shields.io/badge/NLG-orange) ![](https://img.shields.io/badge/Continuous_Prompt-blue) ![](https://img.shields.io/badge/Discrete_Prompt-red) ![](https://img.shields.io/badge/Survey-grey) ![](https://img.shields.io/badge/STS-purple) ![](https://img.shields.io/badge/GLUE-yellow)
 
 ## Diffusion Model
+- 2102 [Argmax Flows and Multinomial Diffusion: Learning Categorical Distributions](https://arxiv.org/abs/2102.05379)
+- 2107 [Structured Denoising Diffusion Models in Discrete State-Spaces](https://arxiv.org/abs/2107.03006)
 - 2205 [Diffusion-LM Improves Controllable Text Generation](https://arxiv.org/abs/2205.14217)
 - 2210 [DiffuSeq: Sequence to Sequence Text Generation with Diffusion Models](https://arxiv.org/abs/2210.08933)
 - 2211 [DiffusionBERT: Improving Generative Masked Language Models with Diffusion Models](https://arxiv.org/abs/2211.15029)
@@ -12,6 +14,8 @@
 - 2212 [Self-conditioned Embedding Diffusion for Text Generation](https://arxiv.org/abs/2211.04236)
 - 2212 [GENIE: Large Scale Pre-training for Generation with Diffusion Model](https://arxiv.org/abs/2211.04236)
 - 2212 [SeqDiffuSeq: Text Diffusion with Encoder-Decoder Transformers](https://arxiv.org/abs/2212.10325)
+
+Argmax flows and multinomial diffusion: Towards non-autoregressive language models
 
 ## Contrastive
 
