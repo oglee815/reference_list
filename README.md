@@ -15,6 +15,9 @@
 - 2212 [GENIE: Large Scale Pre-training for Generation with Diffusion Model](https://arxiv.org/abs/2211.04236)
 - 2212 [SeqDiffuSeq: Text Diffusion with Encoder-Decoder Transformers](https://arxiv.org/abs/2212.10325)
 
+### Study 자료
+- [모두팝] 생성모델부터 Diffusion까지 https://www.youtube.com/watch?v=vZdEGcLU_8U&list=PLv6H9ngYdJbKcGl2VrVBr8YAClPcVrrim&index=36
+
 ## Contrastive
 
 - **2005 Cert: Contrastive self-supervised learning for language understanding**
