@@ -3,7 +3,7 @@
 ## Keyword
 - ![](https://img.shields.io/badge/NLU-green) ![](https://img.shields.io/badge/NLG-orange) ![](https://img.shields.io/badge/Continuous_Prompt-blue) ![](https://img.shields.io/badge/Discrete_Prompt-red) ![](https://img.shields.io/badge/Survey-grey) ![](https://img.shields.io/badge/STS-purple) ![](https://img.shields.io/badge/GLUE-yellow)
 
-## Diffusion Model
+## Diffusion Model 
 - 2102 [Argmax Flows and Multinomial Diffusion: Learning Categorical Distributions](https://arxiv.org/abs/2102.05379)
 - 2107 [Structured Denoising Diffusion Models in Discrete State-Spaces](https://arxiv.org/abs/2107.03006)
 - 2205 [Diffusion-LM Improves Controllable Text Generation](https://arxiv.org/abs/2205.14217)
@@ -87,8 +87,14 @@
   - H를 얻고자, prompt를 사용 "X" means [MASK] 에서 MASK의 hidden output을 사용
   - 1M 위키 샘플을 사용하긴 했는데, Spacy로 negative sample을 만들었으니 SimCSE와 Fair한 비교는 아니라고 봐야하지 않나?
  
-- **2202 Exploring the Impact of Negative Samples of Contrastive Learning: A Case Study of Sentence Embedding**
+- **2202 MoCoSE:Exploring the Impact of Negative Samples of Contrastive Learning: A Case Study of Sentence Embedding**
+  - Momentum contrastive learning model with negative sample queue for sentence embedding, namely **MoCoSE**
+  - Negative sample의 Size에 관한 논문
+  - Negative Sample을 위해 FGSM을 쓰네
 - **2202 Toward Interpretable Semantic Textual Similarity via Optimal Transport-based Contrastive Sentence Learning**
+  - CLRCMD, a contrastive learning framework that optimizes RCMD of sentence pairs, wthich enhances the quality of sentence similarity and their interpretation.
+  - 문장 내의 토큰 레벨에서의 거리를 고려하는듯
+  - NLI 데이터셋으로 Supervised Learning, **Avg STS 82.11**
 - **2203 SCD: Self-Contrastive Decorrelation for Sentence Embeddings**
 - **2203 Improved Universal Sentence Embeddings with Prompt-based Contrastive Learning and Energy-based Learning**
 - **?? A Contrastive Framework for Learning Sentence Representations from Pairwise and Triple-wise Perspective in Angular Space**
