@@ -178,6 +178,7 @@
   - The promptBERT contrastive training objective leverages representations from two different prompt templates as positive pairs
     - Alternative to the dropout mask used in SIMCSE
     - They also apply a template denoising technique
+  - **만약 내가 Soft Prompt Embedding을 사용하면, 얘네가 한 Discrete Prompt하고 차별점이 있긴 있겠다.**
 - **2204 CP-Tuning : Making pre-trained language models end-to-end few-shot learners with contrastive prompt tuning ![](https://img.shields.io/badge/Continuous_Prompt-blue)**
   - *Xu et al., Alibaba, Carnegie Mellon*
   - ![image](https://user-images.githubusercontent.com/18374514/176161041-466f4687-6e39-4767-b048-5d7c5dff5b3e.png)
