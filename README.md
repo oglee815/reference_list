@@ -37,6 +37,8 @@
   - a new self-supervised method called Contrastive Tension (CT) : a noise-contrastive task
   - Fine Tuning 전에는 마지막 레이어보다 앞선 레이어의 **mean pooling**이 STS 점수가 더 높다
   - eng wiki 사용, batch 16. 동일한 문장으로 positive set을 만드는데, simcse와 다른 점은 다른 두개의 모델을 사용하는것(초기화는 동일)
+- **2011 On the Sentence Embeddings from Pre-trained Language Models**
+  - BERT-flow 논문 
 - **2011 Supervised Contrastive Learning for Pret-rained language model finetuning ![](https://img.shields.io/badge/GLUE-yellow)**
   - *Gunel et al, ICLR2021, Stanford, Facebook AI*
   - supervised CL that pushes the exmaples from the same class close and the examples from different classes further apart
@@ -162,7 +164,7 @@
   - *Jiang et al.,, 베이징대*
   - Reforming the sentence embeddings task as the fillin-the-blanks promblem.
   - Two prompt representing method
-    - MASK token's hidden vector itself, weighted averaging top-k tokens' hidden vector which is nearest with MASK token
+    - 1) MASK token's hidden vector itself, 2) Weighted averaging top-k tokens' hidden vector which is nearest with MASK token
   - 3 prompt searching methods
     - Manual, template generation by T5, OptiPrompt 
   - Anisotropy makes the token embeddings cuupy a narrow cone, resuling in a high similarity between any sentence pair
