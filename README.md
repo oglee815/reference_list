@@ -96,7 +96,6 @@
   - 문장 내의 토큰 레벨에서의 거리를 고려하는듯
   - NLI 데이터셋으로 Supervised Learning, **Avg STS 82.11**
 - **2203 SCD: Self-Contrastive Decorrelation for Sentence Embeddings**
-  - 
 - **2203 Improved Universal Sentence Embeddings with Prompt-based Contrastive Learning and Energy-based Learning**
 - **?? A Contrastive Framework for Learning Sentence Representations from Pairwise and Triple-wise Perspective in Angular Space**
 
