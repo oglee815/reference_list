@@ -37,8 +37,6 @@
   - a new self-supervised method called Contrastive Tension (CT) : a noise-contrastive task
   - Fine Tuning 전에는 마지막 레이어보다 앞선 레이어의 **mean pooling**이 STS 점수가 더 높다
   - eng wiki 사용, batch 16. 동일한 문장으로 positive set을 만드는데, simcse와 다른 점은 다른 두개의 모델을 사용하는것(초기화는 동일)
-- **2011 On the Sentence Embeddings from Pre-trained Language Models**
-  - BERT-flow 논문 
 - **2011 Supervised Contrastive Learning for Pret-rained language model finetuning ![](https://img.shields.io/badge/GLUE-yellow)**
   - *Gunel et al, ICLR2021, Stanford, Facebook AI*
   - supervised CL that pushes the exmaples from the same class close and the examples from different classes further apart
@@ -179,6 +177,7 @@
     - Alternative to the dropout mask used in SIMCSE
     - They also apply a template denoising technique
   - **만약 내가 Soft Prompt Embedding을 사용하면, 얘네가 한 Discrete Prompt하고 차별점이 있긴 있겠다.**
+  - Template Denosing이 상당한 영향을 끼치네..
 - **2204 CP-Tuning : Making pre-trained language models end-to-end few-shot learners with contrastive prompt tuning ![](https://img.shields.io/badge/Continuous_Prompt-blue)**
   - *Xu et al., Alibaba, Carnegie Mellon*
   - ![image](https://user-images.githubusercontent.com/18374514/176161041-466f4687-6e39-4767-b048-5d7c5dff5b3e.png)
