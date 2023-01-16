@@ -96,6 +96,7 @@
   - 문장 내의 토큰 레벨에서의 거리를 고려하는듯
   - NLI 데이터셋으로 Supervised Learning, **Avg STS 82.11**
 - **2203 SCD: Self-Contrastive Decorrelation for Sentence Embeddings**
+  - Varying dropout rate를 통해 샘플 생성
 - **2203 Improved Universal Sentence Embeddings with Prompt-based Contrastive Learning and Energy-based Learning**
 - **?? A Contrastive Framework for Learning Sentence Representations from Pairwise and Triple-wise Perspective in Angular Space**
 
@@ -162,7 +163,7 @@
   - *Jiang et al.,, 베이징대*
   - Reforming the sentence embeddings task as the fillin-the-blanks promblem.
   - Two prompt representing method
-    - 1) MASK token's hidden vector itself, 2) Weighted averaging top-k tokens' hidden vector which is nearest with MASK token
+    - MASK token's hidden vector itself, weighted averaging top-k tokens' hidden vector which is nearest with MASK token
   - 3 prompt searching methods
     - Manual, template generation by T5, OptiPrompt 
   - Anisotropy makes the token embeddings cuupy a narrow cone, resuling in a high similarity between any sentence pair
@@ -176,8 +177,6 @@
   - The promptBERT contrastive training objective leverages representations from two different prompt templates as positive pairs
     - Alternative to the dropout mask used in SIMCSE
     - They also apply a template denoising technique
-  - **만약 내가 Soft Prompt Embedding을 사용하면, 얘네가 한 Discrete Prompt하고 차별점이 있긴 있겠다.**
-  - Template Denosing이 상당한 영향을 끼치네..
 - **2204 CP-Tuning : Making pre-trained language models end-to-end few-shot learners with contrastive prompt tuning ![](https://img.shields.io/badge/Continuous_Prompt-blue)**
   - *Xu et al., Alibaba, Carnegie Mellon*
   - ![image](https://user-images.githubusercontent.com/18374514/176161041-466f4687-6e39-4767-b048-5d7c5dff5b3e.png)
