@@ -98,6 +98,10 @@
 - **2203 SCD: Self-Contrastive Decorrelation for Sentence Embeddings**
   - Varying dropout rate를 통해 샘플 생성
 - **2203 Improved Universal Sentence Embeddings with Prompt-based Contrastive Learning and Energy-based Learning**
+  - PromCSE, domain shift setting 문제, soft-prompt 사용, energy-based hinge loss 사용
+  - domain shift 문제는 나도 다룰 수 있음. 만약 다양한 데이터셋에서 search를 잘한다면, 그만큼 universality가 좋은거니까
+  - softmax-based loss가 discriminating power가 적다고 얘기
+  - PromCSE-BERT-Supervised 82.11
 - **?? A Contrastive Framework for Learning Sentence Representations from Pairwise and Triple-wise Perspective in Angular Space**
 
 - **2204 PaSeR: Generative or Contrastive? Pharase Reconstruction for Better Sentence Representation Learning ![](https://img.shields.io/badge/STS-purple)**
