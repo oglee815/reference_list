@@ -73,7 +73,7 @@
   - using wordnet to generate adversarial and contrastive examples
   - 이 친구들도 RTD를 이용함. 다만 BERT가 아니라 spacy와 wordnet으로 하는듯
 
-- 2109 A Contrastive Framework for Learning Sentence Representations from Pairwise and Triple-wise Perspective in Angular Space
+- **2109 A Contrastive Framework for Learning Sentence Representations from Pairwise and Triple-wise Perspective in Angular Space**
 - **2109 ESimCSE: Enhance sample building method for contrastive learning of unsupervised sentence embedding ![](https://img.shields.io/badge/STS-purple)**
   - *Wu et al, Chinese Academy of Sciences*
   - positive pair와 negative pair의 sentence length 차이에 집중
@@ -102,6 +102,9 @@
   - domain shift 문제는 나도 다룰 수 있음. 만약 다양한 데이터셋에서 search를 잘한다면, 그만큼 universality가 좋은거니까
   - softmax-based loss가 discriminating power가 적다고 얘기
   - PromCSE-BERT-Supervised 82.11
+  - 근데, prompt tuning이 domain shift에도 잘 동작한다는 얘기는 맞는 얘긴가?
+  - SimCSE의 NT-Xent Loss가 Energy-based negative log-likelihood loss의 특이 케이스라는 논리
+  - CxC, MS-COCO를 사용함.
 - **?? A Contrastive Framework for Learning Sentence Representations from Pairwise and Triple-wise Perspective in Angular Space**
 
 - **2204 PaSeR: Generative or Contrastive? Pharase Reconstruction for Better Sentence Representation Learning ![](https://img.shields.io/badge/STS-purple)**
